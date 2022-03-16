@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build --no-minify src/index.html",
+    "start": "npm run build && live-server dist"
+  },
+  "devDependencies": {
+    "cssnano": "^5.1.4",
+    "postcss": "^8.4.12"
+  }
+}
