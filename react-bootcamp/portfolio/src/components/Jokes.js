@@ -12,14 +12,14 @@ class Jokes extends Component {
       .then((response) => response.json())
       .then((json) => json.value)
       .then((value) => this.setState({ joke: value }))
-      .catch((err) => console.log(err));
+      .catch((error) => alert(error));
   }
   fetchJokes = () => {
     fetch("https://api.icndb.com/jokes/random/10")
       .then((response) => response.json())
       .then((json) => json.value)
       .then((value) => this.setState({ jokes: value }))
-      .catch((err) => console.log(err));
+      .catch((error) => alert(error));
   };
 
   render() {
