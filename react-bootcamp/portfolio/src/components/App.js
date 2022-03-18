@@ -3,7 +3,6 @@ import Projects from "./Projects";
 import SocialProfiles from "./SocialProfiles";
 import Profile from "../assets/photograph_abhijeet.JPG";
 import Title from "./Title";
-import Jokes from "./Jokes";
 import Header from "./Header";
 
 class App extends Component {
@@ -39,8 +38,6 @@ class App extends Component {
         <Projects />
         <hr />
         <SocialProfiles />
-        <hr />
-        <Jokes />
       </div>
     );
   }
