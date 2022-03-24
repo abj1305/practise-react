@@ -13,7 +13,7 @@ router.get(
     const products = await Product.find({});
     //res.status(401);
     //throw new Error("Not Authenticated");
-    res.json(products);
+    return res.json(products);
   })
 );
 
@@ -28,7 +28,7 @@ router.get(
       return res.json(product);
     }
     res.status(404);
-    throw new Error("Product Not");
+    throw new Error("Product Not Found");
   })
 );
 
