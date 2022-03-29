@@ -1,3 +1,5 @@
+//https://www.freecodecamp.org/news/redux-for-beginners/
+
 import { createStore } from "redux";
 
 const reducer = (state = 0, action) => {
