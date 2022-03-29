@@ -11,7 +11,7 @@ const reducer = (state = 0, action) => {
   }
 };
 
-const store = createStore(reducer, 0);
+const store = createStore(reducer);
 
 store.subscribe(() => {
   console.log("current state", store.getState());
