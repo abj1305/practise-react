@@ -6,7 +6,6 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import FormContainer from "../components/FormContainer";
 import { login } from "../actions/userActions";
-import { is } from "express/lib/request";
 
 const LoginScreen = () => {
   let location = useLocation();
@@ -28,11 +27,13 @@ const LoginScreen = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    // DISPATCH LOGIN
+    dispatch(login(email, password));
   };
   return (
     <FormContainer>
       <h1>Sign In</h1>
+      {error && <Message variant="danger">{error}</Message>}
+      {loading && <Loader />}
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="email">
           <Form.Label>Email Address</Form.Label>
