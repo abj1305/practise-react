@@ -1,6 +1,5 @@
 import asyncHandler from "express-async-handler";
 import Order from "../models/orderModel.js";
-import Order from "../models/orderModel.js";
 
 // Create new Order
 // @route POST /api/orders
