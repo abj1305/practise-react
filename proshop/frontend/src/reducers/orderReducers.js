@@ -74,10 +74,8 @@ export const orderPayReducers = (state = {}, action) => {
         loading: false,
         error: action.paylaod,
       };
-    case ORDER_PAY_RESET: {
-      break;
-    }
-
+    case ORDER_PAY_RESET:
+      return {};
     default:
       return state;
   }
