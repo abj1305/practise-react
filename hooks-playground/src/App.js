@@ -1,36 +1,60 @@
 import React , {useState} from 'react';
 
-function useCounter () {
-  const [count, setCount] = useState(0);
-  const handleIncrement = () => setCount(count+1);
-  const handleDecrement = () => setCount(count-1);
+function useInput() {
+  const [name, setName] = useState('');
+  const [surname, setSurname] = useState('');
+  const [age, setAge] = useState(0);
 
   return {
-    count, 
-    handleIncrement, 
-    handleDecrement
+    name, 
+    surname, 
+    age, 
+    setName, 
+    setSurname, 
+    setAge
   }
-}
-
-function Display () {
-  const {count, handleIncrement, handleDecrement} = useCounter();
-  return(
-    <div>
-      <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Decrement</button>
-      <h1>{count}</h1>
-    </div>
-  );
 }
 
 function App () {
   
+const {name, surname, age, setName, setSurname, setAge} = useInput();
+
   return (
     <div>
-      <Display/>
-     <Display/>
-    </div>
+
     
+      <form>
+        <input
+        type='text'
+        placeholder='Name'
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        >
+        </input>
+        <input
+        type='text'
+        placeholder='Surname'
+        value={surname}
+        onChange={(e) => setSurname(e.target.value)}
+        >
+        </input>
+        <input
+        type='number'
+        placeholder='Age'
+        value={age}
+        onChange={(e) => setAge(e.target.value)}
+        >
+        </input>
+      </form>
+    
+      <div>
+        {`Name: ${name}  Surname: ${surname}  Age: ${age}`}
+      </div>
+
+
+    </div>
+
+
   );
   
 }
